@@ -7,7 +7,6 @@ depend: [WorldGuard, WorldEdit]
 softdepend: [Vault, PlaceholderAPI, LuckPerms]
 main: dev.espi.protectionstones.ProtectionStones
 api-version: 1.20
-folia-supported: true
 
 permissions:
   protectionstones.create:
