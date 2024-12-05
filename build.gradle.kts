@@ -1,6 +1,7 @@
 plugins {
-    `java-library`
-    `maven-publish`
+    id("java-library")
+    id("maven-publish")
+    id("com.gradleup.shadow") version "8.3.5"
 }
 
 group = "dev.espi"
@@ -33,23 +34,37 @@ dependencies {
     compileOnly(libs.luckperms.api)
 }
 
-publishing {
-    publications.create<MavenPublication>("maven") {
-        from(components["java"])
+tasks.javadoc {
+    options.encoding = Charsets.UTF_8.name()
+}
+
+tasks.processResources {
+    filteringCharset = Charsets.UTF_8.name()
+    val props = mapOf(
+        "version" to project.version,
+        "description" to project.description
+    )
+    inputs.properties(props)
+    filesMatching("plugin.yml") {
+        expand(props)
     }
 }
 
-java {
-    toolchain.languageVersion = JavaLanguageVersion.of(21)
-    withSourcesJar()
-    withJavadocJar()
+tasks.build {
+    dependsOn(tasks.shadowJar)
 }
 
-tasks {
-    compileJava {
-        options.release = 21
-    }
-    javadoc {
-        options.encoding = Charsets.UTF_8.name()
-    }
+tasks.withType<JavaCompile> {
+    options.encoding = "UTF-8"
+}
+
+publishing.publications.create<MavenPublication>("maven") {
+    artifact(tasks["shadowJar"])
+}
+
+tasks.shadowJar {
+    minimize()
+    archiveFileName.set("${project.name}-${project.version}.jar")
+    relocate("com.electronwill.night-config", "dev.espi.protectionstones.shaded.com.electronwill.night-config")
+    relocate("org.bstats", "dev.espi.protectionstones.shaded.org.bstats")
 }
