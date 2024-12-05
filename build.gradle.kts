@@ -4,8 +4,8 @@ plugins {
 }
 
 group = "dev.espi"
-version = "2.10.5"
-description = "ProtectionStones"
+version = "2.11.0"
+description = "A intuitive Minecraft region protection plugin that uses a certain block to protect regions."
 
 repositories {
     mavenLocal()
@@ -16,7 +16,7 @@ repositories {
     maven("https://maven.enginehub.org/repo/")
     maven("https://repo.codemc.org/repository/maven-public")
     maven("https://repo.extendedclip.com/content/repositories/placeholderapi/")
-    maven("https://papermc.io/repo/repository/maven-public/")
+    maven("https://repo.papermc.io/repository/maven-public/")
 }
 
 dependencies {
