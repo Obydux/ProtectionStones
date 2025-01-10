@@ -1,12 +1,12 @@
 name: ProtectionStones
 version: ${version}
-description: ${description}
-authors: [EspiDev]
+description: ProtectionStones
+authors: [EspiDev, Obydux]
 
 depend: [WorldGuard, WorldEdit]
 softdepend: [Vault, PlaceholderAPI, LuckPerms]
 main: dev.espi.protectionstones.ProtectionStones
-api-version: 1.17
+api-version: 1.20
 
 permissions:
   protectionstones.create:

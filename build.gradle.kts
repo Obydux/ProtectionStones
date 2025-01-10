@@ -5,7 +5,6 @@ plugins {
 
 group = "dev.espi"
 version = "2.10.5"
-description = "ProtectionStones"
 
 repositories {
     mavenLocal()
@@ -45,7 +44,6 @@ tasks {
     processResources {
         filesMatching("plugin.yml") {
             expand("version" to project.version)
-            expand("description" to project.description)
         }
     }
 }
