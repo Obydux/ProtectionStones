@@ -13,7 +13,7 @@ repositories {
     maven("https://maven.enginehub.org/repo/")
     maven("https://repo.codemc.org/repository/maven-public")
     maven("https://repo.extendedclip.com/content/repositories/placeholderapi/")
-    maven("https://papermc.io/repo/repository/maven-public/")
+    maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://repo.maven.apache.org/maven2/")
 }
 
@@ -23,7 +23,7 @@ dependencies {
     api(libs.commons.io)
     api(libs.commons.lang3)
     api(libs.json.simple)
-    compileOnly(libs.spigot.api)
+    compileOnly(libs.paper.api)
     compileOnly(libs.worldguard.bukkit)
     compileOnly(libs.vaultapi)
     compileOnly(libs.worldedit.bukkit)
