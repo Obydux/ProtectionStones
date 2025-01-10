@@ -1,0 +1,25 @@
+[versions]
+config-toml = "3.6.3"
+json-simple = "1.1.1"
+worldedit-bukkit = "7.2.6-SNAPSHOT"
+worldguard-bukkit = "7.0.9-SNAPSHOT"
+commons-io = "2.16.1"
+placeholderapi = "2.11.6"
+luckperms-api = "5.2"
+vaultapi = "1.7"
+commons-lang3 = "3.14.0"
+bstats-bukkit = "3.0.2"
+spigot-api = "1.20.6-R0.1-SNAPSHOT"
+
+[libraries]
+night-config-toml = { module = "com.electronwill.night-config:toml", version.ref = "config-toml" }
+json-simple = { module = "com.googlecode.json-simple:json-simple", version.ref = "json-simple" }
+worldedit-bukkit = { module = "com.sk89q.worldedit:worldedit-bukkit", version.ref = "worldedit-bukkit" }
+worldguard-bukkit = { module = "com.sk89q.worldguard:worldguard-bukkit", version.ref = "worldguard-bukkit" }
+commons-io = { module = "commons-io:commons-io", version.ref = "commons-io" }
+placeholderapi = { module = "me.clip:placeholderapi", version.ref = "placeholderapi" }
+luckperms-api = { module = "net.luckperms:api", version.ref = "luckperms-api" }
+vaultapi = { module = "net.milkbowl.vault:VaultAPI", version.ref = "vaultapi" }
+commons-lang3 = { module = "org.apache.commons:commons-lang3", version.ref = "commons-lang3" }
+bstats-bukkit = { module = "org.bstats:bstats-bukkit", version.ref = "bstats-bukkit" }
+spigot-api = { module = "org.spigotmc:spigot-api", version.ref = "spigot-api" }
